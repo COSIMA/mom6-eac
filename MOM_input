@@ -50,11 +50,20 @@ NK = 75
 ! === module MOM_fixed_initialization ===
 INPUTDIR = "INPUT"
 
+DEPRESS_INITIAL_SURFACE = True
+SURFACE_HEIGHT_IC_FILE = "forcing/init_eta.nc"
+SURFACE_HEIGHT_IC_VAR = "eta_t"
+
+VELOCITY_CONFIG = "file"
+VELOCITY_FILE = "forcing/init_vel_cgrid.nc"
+
 ! === module MOM_grid_init ===
 GRID_CONFIG = "mosaic"
 GRID_FILE = "hgrid_01.nc"
 TOPO_CONFIG = "file"
 TOPO_FILE = "topog_eac.nc"
+
+REENTRANT_X = False
 
 MINIMUM_DEPTH = 9.5
 MAXIMUM_DEPTH = 6000.0
